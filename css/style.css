@@ -72,6 +72,7 @@ body {
   transition: all 0.2s;
 }
 
+.links__search-box:focus-within,
 .links-container:hover .links__search-box {
   opacity: 1;
 }
@@ -307,7 +308,7 @@ input::-webkit-search-results-decoration {
   align-items: flex-start;
   position: relative;
   padding: 5px 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .todo-list__item input[type="checkbox"] {
