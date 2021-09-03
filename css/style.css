@@ -10,7 +10,6 @@
 }
 
 body {
-  /* background: #333; */
   background-image: url("https://source.unsplash.com/1600x900/?nature");
   background-size: cover;
   background-position: center;
@@ -21,6 +20,18 @@ body {
   align-items: center;
   color: #fff;
   font-family: "SBAggroL";
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("/img/background.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hidden {
