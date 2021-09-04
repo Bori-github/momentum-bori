@@ -279,6 +279,18 @@ input::-webkit-search-results-decoration {
   cursor: pointer;
 }
 
+.todo-notification {
+  display: block;
+  position: absolute;
+  right: 25px;
+  bottom: 40px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #e82e3c;
+  opacity: 0.8;
+}
+
 .todo-container {
   position: fixed;
   right: 20px;
@@ -394,14 +406,19 @@ input::-webkit-search-results-decoration {
   font-size: 0.7rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px), (max-height: 600px) {
   .intro {
+    width: 80vw;
     font-size: 2.5rem;
   }
 
   .intro__name {
     padding: 5px 0;
     font-size: 1.8rem;
+  }
+
+  .greeting {
+    width: 80vw;
   }
 
   .greeting__clock {
@@ -411,6 +428,10 @@ input::-webkit-search-results-decoration {
   .greeting__txt {
     margin: 15px 0 30px;
     font-size: 3rem;
+  }
+
+  .main-focus-container {
+    width: 80vw;
   }
 
   .main-focus__form {
@@ -431,17 +452,13 @@ input::-webkit-search-results-decoration {
     font-size: 1em;
   }
 
-  ..main-focus__row input[type="checkbox"] + span::before {
+  .main-focus__row input[type="checkbox"] + span::before {
     width: 14px;
     height: 14px;
     line-height: 14px;
   }
 
-  ..main-focus__row input[type="checkbox"] + span {
-    font-size: 1.2rem;
-  }
-
-  ..main-focus__row span:last-child {
+  .main-focus__row span:last-child {
     font-size: 1rem;
     transform: translateY(3px);
   }
@@ -457,65 +474,46 @@ input::-webkit-search-results-decoration {
   }
 }
 
-@media screen and (max-height: 600px) {
-  .intro {
-    font-size: 2.5rem;
-  }
-
-  .intro__name {
-    padding: 5px 0;
-    font-size: 1.8rem;
-  }
-
-  .greeting__clock {
-    font-size: 5rem;
+@media screen and (max-width: 480px), (max-height: 550px) {
+  .header {
+    display: none;
   }
 
   .greeting__txt {
-    margin: 15px 0 30px;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .main-focus__form {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .main-focus__input {
-    margin-top: 10px;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
 
   .main-focus__display {
-    font-size: 1.2rem;
-  }
-
-  .main-focus__display h3 {
-    margin-bottom: 20px;
-    font-size: 1em;
-  }
-
-  ..main-focus__row input[type="checkbox"] + span::before {
-    width: 14px;
-    height: 14px;
-    line-height: 14px;
-  }
-
-  ..main-focus__row input[type="checkbox"] + span {
-    font-size: 1.2rem;
-  }
-
-  ..main-focus__row span:last-child {
     font-size: 1rem;
-    transform: translateY(3px);
+  }
+
+  .main-focus__row input[type="checkbox"] + span {
+    font-size: 1rem;
+  }
+
+  .main-focus__row input[type="checkbox"] + span::before {
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+  }
+
+  .main-focus__row input[type="checkbox"] + span {
+    /* font-size: 1.2rem; */
+  }
+
+  .main-focus__row span:last-child {
+    transform: translateY(4px);
   }
 
   .quotes-container {
-    font-size: 0.8rem;
-    line-height: 1.2rem;
-  }
-
-  .quotes-container p:last-child {
-    margin-top: 5px;
-    font-size: 0.6rem;
+    display: none;
   }
 }

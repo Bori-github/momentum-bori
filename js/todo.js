@@ -1,7 +1,6 @@
 const todoBtn = document.getElementById("todo-btn");
 
 const todoContainer = document.querySelector(".todo-container");
-const todoEmpty = document.querySelector(".todo-body p");
 const todoList = document.getElementById("todo-list");
 const todoForm = document.getElementById("todo-form");
 const todoInput = document.getElementById("todo-form__new-todo");
@@ -11,10 +10,15 @@ let todos = [];
 const TODOS_KEY = "todos";
 
 function displayTodoEmpty() {
+  const todoEmpty = document.querySelector(".todo-body p");
+  const todoNotification = document.querySelector(".todo-notification");
+
   if (todos.length === 0) {
     todoEmpty.classList.remove(HIDDEN_CLASSNAME);
+    todoNotification.classList.add(HIDDEN_CLASSNAME);
   } else {
     todoEmpty.classList.add(HIDDEN_CLASSNAME);
+    todoNotification.classList.remove(HIDDEN_CLASSNAME);
   }
 }
 
@@ -72,8 +76,6 @@ function addTodo(e) {
   paintTodo(newTodoObj);
 
   saveTodos();
-
-  todoEmpty.classList.add(HIDDEN_CLASSNAME);
 }
 
 todoForm.addEventListener("submit", addTodo);
