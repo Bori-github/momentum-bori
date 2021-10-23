@@ -78,7 +78,7 @@ body {
   padding: 5px 20px;
 }
 
-.links-container {
+.links-form {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -95,7 +95,7 @@ body {
 }
 
 .links__search-box:focus-within,
-.links-container:hover .links__search-box {
+.links-form:hover .links__search-box {
   opacity: 1;
 }
 
