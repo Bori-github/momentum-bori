@@ -31,17 +31,20 @@
       </form>
 
       <header class="header">
-        <form
-          action="https://www.google.com/search"
-          method="get"
-          class="links-form"
-        >
-          <span>Links</span>
-          <span class="links__search-box">
-            <span class="material-icons-outlined"> search </span>
-            <input type="search" name="q" />
-          </span>
-        </form>
+        <div class="links-container">
+          <form
+            action="https://www.google.com/search"
+            method="get"
+            class="links__form"
+            id="links__form"
+          >
+            <span>Links</span>
+            <span class="links__search-box">
+              <span class="material-icons-outlined"> search </span>
+              <input type="search" name="q" id="search" />
+            </span>
+          </form>
+        </div>
 
         <div class="weather-container">
           <div class="weather__row">
